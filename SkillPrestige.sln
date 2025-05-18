@@ -12,8 +12,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{97A03B7C-6
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkillPrestige", "SkillPrestige\SkillPrestige.csproj", "{51F035C9-0E81-4F27-9B5D-1A4C61FAEB88}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkillPrestige.LuckSkill", "SkillPrestigeAdapter\SkillPrestige.LuckSkill\SkillPrestige.LuckSkill.csproj", "{666F2E76-D376-4DEB-9656-BD847B23E91E}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{A8401C62-2051-4C3C-B97B-5281EBB04753}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkillPrestige.Yacs", "SkillPrestigeAdapter\SkillPrestige.Yacs\SkillPrestige.Yacs.csproj", "{7915B95A-604B-408E-8A37-218267739375}"
@@ -52,10 +50,6 @@ Global
 		{51F035C9-0E81-4F27-9B5D-1A4C61FAEB88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51F035C9-0E81-4F27-9B5D-1A4C61FAEB88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51F035C9-0E81-4F27-9B5D-1A4C61FAEB88}.Release|Any CPU.Build.0 = Release|Any CPU
-		{666F2E76-D376-4DEB-9656-BD847B23E91E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{666F2E76-D376-4DEB-9656-BD847B23E91E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{666F2E76-D376-4DEB-9656-BD847B23E91E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{666F2E76-D376-4DEB-9656-BD847B23E91E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A8401C62-2051-4C3C-B97B-5281EBB04753}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A8401C62-2051-4C3C-B97B-5281EBB04753}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8401C62-2051-4C3C-B97B-5281EBB04753}.Release|Any CPU.ActiveCfg = Release|Any CPU
