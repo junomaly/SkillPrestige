@@ -19,7 +19,6 @@ namespace SkillPrestige.Framework.Menus
 
         // private Checkbox ResetRecipesCheckbox;
         private Checkbox UseExperienceMultiplierCheckbox;
-        private Checkbox PainlessPrestigeModeCheckbox;
         private IntegerEditor TierOneCostEditor;
         private IntegerEditor TierTwoCostEditor;
         private IntegerEditor PointsPerPrestigeEditor;
@@ -40,7 +39,6 @@ namespace SkillPrestige.Framework.Menus
 
             // this.ResetRecipesCheckbox.OnCursorMoved(e);
             this.UseExperienceMultiplierCheckbox.OnCursorMoved(e);
-            this.PainlessPrestigeModeCheckbox.OnCursorMoved(e);
 
             this.TierOneCostEditor.OnCursorMoved(e);
             this.TierTwoCostEditor.OnCursorMoved(e);
@@ -58,8 +56,6 @@ namespace SkillPrestige.Framework.Menus
 
             // this.ResetRecipesCheckbox.OnButtonPressed(e, isClick);
             this.UseExperienceMultiplierCheckbox.OnButtonPressed(e, isClick);
-            this.PainlessPrestigeModeCheckbox.OnButtonPressed(e, isClick);
-
             this.TierOneCostEditor.OnButtonPressed(e, isClick);
             this.TierTwoCostEditor.OnButtonPressed(e, isClick);
             this.PointsPerPrestigeEditor.OnButtonPressed(e, isClick);
@@ -80,7 +76,6 @@ namespace SkillPrestige.Framework.Menus
             this.TierOneCostEditor.Draw(spriteBatch);
             this.TierTwoCostEditor.Draw(spriteBatch);
             this.PointsPerPrestigeEditor.Draw(spriteBatch);
-            this.PainlessPrestigeModeCheckbox.Draw(spriteBatch);
             this.ExperiencePerPainlessPrestigeEditor.Draw(spriteBatch);
             Mouse.DrawCursor(spriteBatch);
         }
@@ -112,12 +107,15 @@ namespace SkillPrestige.Framework.Menus
             pointsPerPrestigeEditorLocation.X = this.TierOneCostEditor.Bounds.X;
             this.PointsPerPrestigeEditor = new IntegerEditor("Points Per Prestige", PerSaveOptions.Instance.PointsPerPrestige, 1, 100, pointsPerPrestigeEditorLocation, ChangePointsPerPrestige);
 
-            var painlessPrestigeModeCheckboxBounds = new Rectangle(this.PointsPerPrestigeEditor.Bounds.X, this.PointsPerPrestigeEditor.Bounds.Y + this.PointsPerPrestigeEditor.Bounds.Height + padding, 9 * Game1.pixelZoom, 9 * Game1.pixelZoom);
-            const string painlessPrestigeModeCheckboxText = "Painless Prestige Mode";
-            this.PainlessPrestigeModeCheckbox = new Checkbox(PerSaveOptions.Instance.PainlessPrestigeMode, painlessPrestigeModeCheckboxText, painlessPrestigeModeCheckboxBounds, ChangePainlessPrestigeMode);
+            //var painlessPrestigeModeCheckboxBounds = new Rectangle(this.PointsPerPrestigeEditor.Bounds.X, this.PointsPerPrestigeEditor.Bounds.Y + this.PointsPerPrestigeEditor.Bounds.Height + padding, 9 * Game1.pixelZoom, 9 * Game1.pixelZoom);
+            //const string painlessPrestigeModeCheckboxText = "Painless Prestige Mode";
+            //this.PainlessPrestigeModeCheckbox = new Checkbox(PerSaveOptions.Instance.PainlessPrestigeMode, painlessPrestigeModeCheckboxText, painlessPrestigeModeCheckboxBounds, ChangePainlessPrestigeMode);
 
-            var experiencePerPainlessPrestigeEditorLocation = new Vector2(painlessPrestigeModeCheckboxBounds.X, painlessPrestigeModeCheckboxBounds.Y);
-            experiencePerPainlessPrestigeEditorLocation.X += painlessPrestigeModeCheckboxBounds.Width + Game1.dialogueFont.MeasureString(painlessPrestigeModeCheckboxText).X + padding;
+            //var experiencePerPainlessPrestigeEditorLocation = new Vector2(this.PointsPerPrestigeEditor.Bounds.X, this.PointsPerPrestigeEditor.Bounds.Y);
+            // experiencePerPainlessPrestigeEditorLocation.X += painlessPrestigeModeCheckboxBounds.Width + Game1.dialogueFont.MeasureString(painlessPrestigeModeCheckboxText).X + padding;
+
+            var experiencePerPainlessPrestigeEditorLocation = pointsPerPrestigeEditorLocation;
+            experiencePerPainlessPrestigeEditorLocation.Y += this.PointsPerPrestigeEditor.Bounds.Height + padding;
             this.ExperiencePerPainlessPrestigeEditor = new IntegerEditor("Extra Experience Cost", PerSaveOptions.Instance.ExperienceNeededPerPainlessPrestige, 1000, 100000, experiencePerPainlessPrestigeEditorLocation, ChangeExperiencePerPainlessPrestige, 1000);
 
             this.SetClickableTextureIds();
@@ -135,9 +133,8 @@ namespace SkillPrestige.Framework.Menus
             this.TierTwoCostEditor.PlusButton.ClickableTextureComponent.myID = 5;
             this.PointsPerPrestigeEditor.MinusButton.ClickableTextureComponent.myID = 6;
             this.PointsPerPrestigeEditor.PlusButton.ClickableTextureComponent.myID = 7;
-            this.PainlessPrestigeModeCheckbox.ClickableTextureComponent.myID = 8;
-            this.ExperiencePerPainlessPrestigeEditor.MinusButton.ClickableTextureComponent.myID = 9;
-            this.ExperiencePerPainlessPrestigeEditor.PlusButton.ClickableTextureComponent.myID = 10;
+            this.ExperiencePerPainlessPrestigeEditor.MinusButton.ClickableTextureComponent.myID = 8;
+            this.ExperiencePerPainlessPrestigeEditor.PlusButton.ClickableTextureComponent.myID = 9;
 
             //neighbor ids
 
@@ -169,22 +166,17 @@ namespace SkillPrestige.Framework.Menus
             this.TierTwoCostEditor.PlusButton.ClickableTextureComponent.leftNeighborID = this.TierTwoCostEditor.MinusButton.ClickableTextureComponent.myID;
 
             this.PointsPerPrestigeEditor.MinusButton.ClickableTextureComponent.upNeighborID = this.TierOneCostEditor.ClickableTextureComponent.myID;
-            this.PointsPerPrestigeEditor.MinusButton.ClickableTextureComponent.downNeighborID = this.PainlessPrestigeModeCheckbox.ClickableTextureComponent.myID;
+            this.PointsPerPrestigeEditor.MinusButton.ClickableTextureComponent.downNeighborID = this.ExperiencePerPainlessPrestigeEditor.ClickableTextureComponent.myID;
             this.PointsPerPrestigeEditor.MinusButton.ClickableTextureComponent.rightNeighborID = this.PointsPerPrestigeEditor.PlusButton.ClickableTextureComponent.myID;
 
             this.PointsPerPrestigeEditor.PlusButton.ClickableTextureComponent.upNeighborID = this.TierOneCostEditor.ClickableTextureComponent.myID;
-            this.PointsPerPrestigeEditor.PlusButton.ClickableTextureComponent.downNeighborID = this.PainlessPrestigeModeCheckbox.ClickableTextureComponent.myID;
+            this.PointsPerPrestigeEditor.PlusButton.ClickableTextureComponent.downNeighborID = this.ExperiencePerPainlessPrestigeEditor.ClickableTextureComponent.myID;
             this.PointsPerPrestigeEditor.PlusButton.ClickableTextureComponent.leftNeighborID = this.PointsPerPrestigeEditor.MinusButton.ClickableTextureComponent.myID;
 
-            this.PainlessPrestigeModeCheckbox.ClickableTextureComponent.upNeighborID = this.PointsPerPrestigeEditor.MinusButton.ClickableTextureComponent.myID;
-            this.PainlessPrestigeModeCheckbox.ClickableTextureComponent.downNeighborID = this.ExperiencePerPainlessPrestigeEditor.MinusButton.ClickableTextureComponent.myID;
-            this.PainlessPrestigeModeCheckbox.ClickableTextureComponent.rightNeighborID = this.ExperiencePerPainlessPrestigeEditor.MinusButton.ClickableTextureComponent.myID;
-
-            this.ExperiencePerPainlessPrestigeEditor.MinusButton.ClickableTextureComponent.upNeighborID = this.PainlessPrestigeModeCheckbox.ClickableTextureComponent.myID;
-            this.ExperiencePerPainlessPrestigeEditor.MinusButton.ClickableTextureComponent.leftNeighborID = this.PainlessPrestigeModeCheckbox.ClickableTextureComponent.myID;
+            this.ExperiencePerPainlessPrestigeEditor.MinusButton.ClickableTextureComponent.upNeighborID = this.PointsPerPrestigeEditor.ClickableTextureComponent.myID;
             this.ExperiencePerPainlessPrestigeEditor.MinusButton.ClickableTextureComponent.rightNeighborID = this.ExperiencePerPainlessPrestigeEditor.PlusButton.ClickableTextureComponent.myID;
 
-            this.ExperiencePerPainlessPrestigeEditor.PlusButton.ClickableTextureComponent.upNeighborID = this.PainlessPrestigeModeCheckbox.ClickableTextureComponent.myID;
+            this.ExperiencePerPainlessPrestigeEditor.PlusButton.ClickableTextureComponent.upNeighborID = this.PointsPerPrestigeEditor.ClickableTextureComponent.myID;
             this.ExperiencePerPainlessPrestigeEditor.PlusButton.ClickableTextureComponent.leftNeighborID = this.ExperiencePerPainlessPrestigeEditor.MinusButton.ClickableTextureComponent.myID;
         }
 
@@ -201,7 +193,6 @@ namespace SkillPrestige.Framework.Menus
                 this.TierTwoCostEditor.PlusButton.ClickableTextureComponent,
                 this.PointsPerPrestigeEditor.MinusButton.ClickableTextureComponent,
                 this.PointsPerPrestigeEditor.PlusButton.ClickableTextureComponent,
-                this.PainlessPrestigeModeCheckbox.ClickableTextureComponent,
                 this.ExperiencePerPainlessPrestigeEditor.MinusButton.ClickableTextureComponent,
                 this.ExperiencePerPainlessPrestigeEditor.PlusButton.ClickableTextureComponent
             };

@@ -119,6 +119,7 @@ namespace SkillPrestige.Framework
                 Instance.CostOfTierTwoPrestige = 2;
                 Instance.PointsPerPrestige = 1;
                 Instance.ExperienceNeededPerPainlessPrestige = 15000;
+                Instance.PainlessPrestigeMode = true;
                 Save();
             }
             catch (Exception exception)

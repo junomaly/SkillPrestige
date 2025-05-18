@@ -70,33 +70,12 @@ namespace SkillPrestige
         {
             try
             {
-                if (PerSaveOptions.Instance.PainlessPrestigeMode)
-                {
-                    Logger.LogInformation($"Prestiging skill {skill.Type.Name} via Painless Mode.");
-                    skill.SetSkillExperience(skill.GetSkillExperience() - PerSaveOptions.Instance.ExperienceNeededPerPainlessPrestige);
-                    Logger.LogInformation($"Removed {PerSaveOptions.Instance.ExperienceNeededPerPainlessPrestige} experience points from {skill.Type.Name} skill.");
-                }
-                else
-                {
-                    Logger.LogInformation($"Prestiging skill {skill.Type.Name}.");
-                    skill.OnPrestige?.Invoke();
-                    skill.SetSkillExperience(0);
-                    skill.SetSkillLevel(0);
-                    Logger.LogInformation($"Skill {skill.Type.Name} experience and level reset.");
-                    // if (PerSaveOptions.Instance.ResetRecipesOnPrestige)
-                    // {
-                    //     var currentPrestige = PrestigeSet.Instance.Prestiges.Single(x => x.SkillType == skill.Type);
-                    //     currentPrestige.CraftingRecipeAmountsToSave = RemovePlayerCraftingRecipesForSkill(skill.Type);
-                    //     currentPrestige.CookingRecipeAmountsToSave = RemovePlayerCookingRecipesForSkill(skill.Type);
-                    //     Logger.LogVerbose($"stored crafting recipe counts upon prestige of skill {currentPrestige.SkillType.Name}, count: {currentPrestige.CraftingRecipeAmountsToSave.Count}");
-                    //     Logger.LogVerbose($"stored cooking recipe counts upon prestige of skill {currentPrestige.SkillType.Name}, count: {currentPrestige.CookingRecipeAmountsToSave.Count}");
-                    //     RecipeHandler.ResetRecipes();
-                    //     RecipeHandler.LoadRecipes();
-                    // }
-                    Profession.RemoveProfessions(skill);
-                    PlayerManager.CorrectStats(skill);
-                    Profession.AddMissingProfessions();
-                }
+                // previously painless prestige:
+                Logger.LogInformation($"Prestiging skill {skill.Type.Name} via Painless Mode.");
+                skill.SetSkillExperience(skill.GetSkillExperience() - PerSaveOptions.Instance.ExperienceNeededPerPainlessPrestige);
+                Logger.LogInformation($"Removed {PerSaveOptions.Instance.ExperienceNeededPerPainlessPrestige} experience points from {skill.Type.Name} skill.");
+
+
                 PrestigeSet.Instance.Prestiges.Single(x => x.SkillType == skill.Type).PrestigePoints += PerSaveOptions.Instance.PointsPerPrestige;
                 Logger.LogInformation($"{PerSaveOptions.Instance.PointsPerPrestige} Prestige point(s) added to {skill.Type.Name} skill.");
 
@@ -105,30 +84,6 @@ namespace SkillPrestige
             {
                 Logger.LogError(exception.Message + Environment.NewLine + exception.StackTrace);
             }
-        }
-
-        /// <summary>Removes all crafting recipes granted by levelling a skill.</summary>
-        /// <param name="skillType">the skill type to remove all crafting recipes from.</param>
-        private static Dictionary<string, int> RemovePlayerCraftingRecipesForSkill(SkillType skillType)
-        {
-            Logger.LogInformation($"Removing {skillType.Name} crafting recipes");
-            var craftingAmountsToStore = new Dictionary<string, int>();
-            foreach (
-                var recipe in
-                CraftingRecipe.craftingRecipes.Where(
-                    x =>
-                        x.Value.Split('/').Length > 4
-                        && x.Value.Split('/')[4].Contains(skillType.Name)
-                        && Game1.player.craftingRecipes.ContainsKey(x.Key)))
-            {
-                Logger.LogVerbose($"Removing {skillType.Name} crafting recipe {recipe.Key}");
-                int craftCount = Game1.player.craftingRecipes[recipe.Key];
-                //storing crafted amount of recipe
-                if (craftCount > 0) craftingAmountsToStore.Add(recipe.Key, craftCount);
-                Game1.player.craftingRecipes.Remove(recipe.Key);
-            }
-            Logger.LogInformation($"{skillType.Name} crafting recipes removed.");
-            return craftingAmountsToStore;
         }
 
         /// <summary>Removes all cooking recipes granted by levelling a skill.</summary>
