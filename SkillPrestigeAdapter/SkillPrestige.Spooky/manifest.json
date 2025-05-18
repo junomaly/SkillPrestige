@@ -8,10 +8,10 @@
    */
   "$schema": "https://smapi.io/schemas/manifest.json",
   "UniqueID": "Milli2306.SpookyPrestigeAdapter",
-  "Name": "Skill Prestige for the Scaring/Thieving Skill",
+  "Name": "SkillPrestige.Spooky",
   "Author": "Milli2306",
   "Version": "1.0.0-Debug",
-  "Description": "Extends Skill Prestige to support the Scaring/Thieving Skill.",
+  "Description": "Extends Skill Prestige to support the Scaring/Thieving Skill",
   "MinimumApiVersion": "4.0.0",
   "EntryDll": "SkillPrestige.Spooky.dll",
   "Dependencies": [

@@ -8,10 +8,10 @@
    */
   "$schema": "https://smapi.io/schemas/manifest.json",
   "UniqueID": "Milli2306.ArchaeologyPrestigeAdapter",
-  "Name": "Skill Prestige for the Archaeology Skill",
+  "Name": "SkillPrestige.Archaeology",
   "Author": "Milli2306",
   "Version": "1.0.0-Debug",
-  "Description": "Extends Skill Prestige to support the Archaeology Skill.",
+  "Description": "Extends Skill Prestige to support the Archaeology Skill",
   "MinimumApiVersion": "4.0.0",
   "EntryDll": "SkillPrestige.Archaeology.dll",
   "Dependencies": [

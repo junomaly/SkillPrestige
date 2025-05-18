@@ -7,11 +7,11 @@
    | 
    */
   "$schema": "https://smapi.io/schemas/manifest.json",
-  "UniqueID": "Milli2306.TravellingSkillPrestigeAdapter",
-  "Name": "Skill Prestige for Travelling Skill",
+  "UniqueID": "Milli2306.TravellingPrestigeAdapter",
+  "Name": "SkillPrestige.Travelling",
   "Author": "Milli2306",
   "Version": "1.0.0-Debug",
-  "Description": "Extends Skill Prestige to support the Travelling Skill mod.",
+  "Description": "Extends Skill Prestige to support the Travelling Skill",
   "MinimumApiVersion": "4.0.0",
   "EntryDll": "SkillPrestige.Travelling.dll",
   "Dependencies": [

@@ -1,5 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	
+
 	<PropertyGroup>
 		<Version>1.0.0</Version>
 		<RootNamespace>SkillPrestige.Archaeology</RootNamespace>
@@ -14,13 +14,13 @@
 		<UpdateKeys></UpdateKeys>
 	</PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
+    <PackageReference Include="Leclair.Stardew.ModManifestBuilder" Version="2.4.1" />
+  </ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\SkillPrestige\SkillPrestige.csproj" />
+	  <ProjectReference Include="..\..\SkillPrestige\SkillPrestige.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

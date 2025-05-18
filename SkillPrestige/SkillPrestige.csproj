@@ -4,10 +4,21 @@
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
+
+  <PropertyGroup>
+    <Name>SkillPrestige</Name>
+    <Author>CinderGarde</Author>
+    <Description>Lets you earn permanent profession perks beyond that which can normally be obtained in Vanilla play by spending Prestige Points, earned by resetting a skill from 10 to 0.</Description>
+    <UniqueId>alphablackwolf.skillPrestige</UniqueId>
+
+    <UpdateKeys></UpdateKeys>
+  </PropertyGroup>
+
   <ItemGroup>
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
+    <PackageReference Include="Leclair.Stardew.ModManifestBuilder" Version="2.4.1" />
     <PackageReference Include="JsonNet.PrivateSettersContractResolvers.Source" Version="0.1.0" IncludeAssets="runtime; build; native; contentfiles; analyzers" PrivateAssets="all" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.1.1" />
   </ItemGroup>
 
   <ItemGroup>

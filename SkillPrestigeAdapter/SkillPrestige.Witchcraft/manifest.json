@@ -7,11 +7,11 @@
    | 
    */
   "$schema": "https://smapi.io/schemas/manifest.json",
-  "UniqueID": "Milli2306.ArsVenificiPrestigeAdapter",
-  "Name": "Skill Prestige for Wizardry Skill",
+  "UniqueID": "Milli2306.WizardryPrestigeAdapter",
+  "Name": "SkillPrestige.Wizardry",
   "Author": "Milli2306",
   "Version": "1.0.0-Debug",
-  "Description": "Extends Skill Prestige to support the Wizardry skill from Ars Venifici mod.",
+  "Description": "Extends Skill Prestige to support the Wizardry Skill from Ars Venifici",
   "MinimumApiVersion": "4.0.0",
   "EntryDll": "SkillPrestige.Wizardry.dll",
   "Dependencies": [

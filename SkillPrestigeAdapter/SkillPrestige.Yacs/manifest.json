@@ -1,21 +1,33 @@
 {
-    "Name": "Skill Prestige for Yet Another Cooking Skill",
-    "Author": "CinderGarde",
-    "Version": "1.4.4",
-    "Description": "Extends Skill Prestige to support the Yet Another Cooking Skill mod.",
-    "UniqueID": "CinderGarde.YetAnotherCookingSkillPrestigeAdapter",
-    "EntryDll": "SkillPrestige.Yacs.dll",
-    "MinimumApiVersion": "4.4.0",
-    "Dependencies": [
-        {
-            "UniqueID": "alphablackwolf.skillPrestige"
-        },
-        {
-            "UniqueID": "spacechase0.SpaceCore"
-        },
-        {
-            "UniqueID": "moonslime.CookingSkill"
-        }
-    ],
-    "UpdateKeys": [ "Nexus:569" ]
+  /*
+   | This file is automatically updated by ModManifestBuilder
+   | when the project is compiled.
+   | 
+   | Changes made to this file may be overwritten.
+   | 
+   */
+  "$schema": "https://smapi.io/schemas/manifest.json",
+  "UniqueID": "CinderGarde.YetAnotherCookingSkillPrestigeAdapter",
+  "Name": "SkillPrestige.Yacs",
+  "Author": "CinderGarde",
+  "Version": "1.0.0-Debug",
+  "Description": "Extends Skill Prestige to support the Yet Another Cooking Skill mod.",
+  "MinimumApiVersion": "4.4.0",
+  "EntryDll": "SkillPrestige.Yacs.dll",
+  "Dependencies": [
+    {
+      "UniqueID": "alphablackwolf.skillPrestige",
+      "MinimumVersion": "1.2.5"
+    },
+    {
+      "UniqueID": "moonslime.CookingSkill"
+    },
+    {
+      "UniqueID": "spacechase0.SpaceCore",
+      "MinimumVersion": "1.27.0"
+    }
+  ],
+  "UpdateKeys": [
+    "Nexus:569"
+  ]
 }

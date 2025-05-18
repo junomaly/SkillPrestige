@@ -8,10 +8,10 @@
    */
   "$schema": "https://smapi.io/schemas/manifest.json",
   "UniqueID": "Milli2306.BinningPrestigeAdapter",
-  "Name": "Skill Prestige for the Binning Skill",
+  "Name": "SkillPrestige.Binning",
   "Author": "Milli2306",
   "Version": "1.0.0-Debug",
-  "Description": "Extends Skill Prestige to support the Binning Skill.",
+  "Description": "Extends Skill Prestige to support the Binning Skill",
   "MinimumApiVersion": "4.0.0",
   "EntryDll": "SkillPrestige.Binning.dll",
   "Dependencies": [

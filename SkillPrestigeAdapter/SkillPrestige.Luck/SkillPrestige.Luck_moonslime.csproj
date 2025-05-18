@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
+    <PackageReference Include="Leclair.Stardew.ModManifestBuilder" Version="2.4.1" />
   </ItemGroup>
 
 	<PropertyGroup>
@@ -19,9 +20,9 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\SkillPrestige\SkillPrestige.csproj" />
+		<ProjectReference Include="..\..\SkillPrestige\SkillPrestige.csproj" />
 	</ItemGroup>
-	
+
   <ItemGroup>
     <Reference Include="SpaceCore">
       <HintPath>$(GameModsPath)\SpaceCore\SpaceCore.dll</HintPath>

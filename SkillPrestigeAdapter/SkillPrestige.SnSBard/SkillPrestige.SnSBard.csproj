@@ -5,9 +5,10 @@
 		<RootNamespace>SkillPrestige.SnSBard</RootNamespace>
 	</PropertyGroup>
 
-	<ItemGroup>
-		<PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
-	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
+    <PackageReference Include="Leclair.Stardew.ModManifestBuilder" Version="2.4.1" />
+  </ItemGroup>
 
 	<PropertyGroup>
 		<Name>SkillPrestige.SnSBard</Name>
@@ -17,9 +18,9 @@
 
 		<UpdateKeys></UpdateKeys>
 	</PropertyGroup>
-	
+
 	<ItemGroup>
-		<ProjectReference Include="..\SkillPrestige\SkillPrestige.csproj" />
+		<ProjectReference Include="..\..\SkillPrestige\SkillPrestige.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

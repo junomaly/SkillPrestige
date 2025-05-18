@@ -1,0 +1,19 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <!-- common build settings -->
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <Nullable>enable</Nullable>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <ModZipPath>$(SolutionDir)\_release</ModZipPath>
+        <EnableModZip Condition="$(Configuration) != 'Release'">False</EnableModZip>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
+<!--        <PackageReference Include="Leclair.Stardew.ModManifestBuilder" Version="2.4.1" />-->
+    </ItemGroup>
+</Project>

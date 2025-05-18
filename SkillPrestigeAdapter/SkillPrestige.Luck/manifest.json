@@ -8,10 +8,10 @@
    */
   "$schema": "https://smapi.io/schemas/manifest.json",
   "UniqueID": "Milli2306.LuckSkillSpacecorePrestigeAdapter",
-  "Name": "Skill Prestige for Luck Skill",
+  "Name": "SkillPrestige.Luck_moonslime",
   "Author": "Milli2306",
   "Version": "1.0.0-Debug",
-  "Description": "Extends Skill Prestige to support the Luck Skill mod.",
+  "Description": "Extends Skill Prestige to support moonslime's Luck Skill",
   "MinimumApiVersion": "4.0.0",
   "EntryDll": "SkillPrestige.Luck_moonslime.dll",
   "Dependencies": [

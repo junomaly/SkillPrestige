@@ -8,10 +8,10 @@
    */
   "$schema": "https://smapi.io/schemas/manifest.json",
   "UniqueID": "Milli2306.SnSPrestigeAdapterRogue",
-  "Name": "Skill Prestige for the Rogue Skill from SnS",
+  "Name": "SkillPrestige.SnSRogue",
   "Author": "Milli2306",
   "Version": "1.0.0-Debug",
-  "Description": "Extends Skill Prestige to support the Rogue Skill from SnS.",
+  "Description": "Extends Skill Prestige to support the Rogue Skill from SnS",
   "MinimumApiVersion": "4.0.0",
   "EntryDll": "SkillPrestige.SnSRogue.dll",
   "Dependencies": [

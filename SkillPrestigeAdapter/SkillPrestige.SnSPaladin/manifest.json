@@ -8,10 +8,10 @@
    */
   "$schema": "https://smapi.io/schemas/manifest.json",
   "UniqueID": "Milli2306.SnSPrestigeAdapterPaladin",
-  "Name": "Skill Prestige for the Paladin Skill from SnS",
+  "Name": "SkillPrestige.SnSPaladin",
   "Author": "Milli2306",
   "Version": "1.0.0-Debug",
-  "Description": "Extends Skill Prestige to support the Paladin Skill from SnS.",
+  "Description": "Extends Skill Prestige to support the Paladin Skill from SnS",
   "MinimumApiVersion": "4.0.0",
   "EntryDll": "SkillPrestige.SnSPaladin.dll",
   "Dependencies": [

@@ -8,10 +8,10 @@
    */
   "$schema": "https://smapi.io/schemas/manifest.json",
   "UniqueID": "Milli2306.SocializingPrestigeAdapter",
-  "Name": "Skill Prestige for the Socializing Skill",
+  "Name": "SkillPrestige.Socializing",
   "Author": "Milli2306",
   "Version": "1.0.0-Debug",
-  "Description": "Extends Skill Prestige to support the Socializing Skill.",
+  "Description": "Extends Skill Prestige to support the Socializing Skill",
   "MinimumApiVersion": "4.0.0",
   "EntryDll": "SkillPrestige.Socializing.dll",
   "Dependencies": [

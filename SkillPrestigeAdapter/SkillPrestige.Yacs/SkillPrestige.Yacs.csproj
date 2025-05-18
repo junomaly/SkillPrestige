@@ -1,14 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
-        <RootNamespace>SkillPrestige.Yacs</RootNamespace>
-    </PropertyGroup>
+  <PropertyGroup>
+      <TargetFramework>net6.0</TargetFramework>
+      <ImplicitUsings>enable</ImplicitUsings>
+      <Nullable>enable</Nullable>
+      <RootNamespace>SkillPrestige.Yacs</RootNamespace>
+  </PropertyGroup>
+
+
+  <PropertyGroup>
+    <Name>SkillPrestige.Yacs</Name>
+    <Author>CinderGarde</Author>
+    <Description>Extends Skill Prestige to support the Yet Another Cooking Skill mod.</Description>
+    <UniqueId>CinderGarde.YetAnotherCookingSkillPrestigeAdapter</UniqueId>
+
+    <UpdateKeys></UpdateKeys>
+  </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.1.1" />
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
+    <PackageReference Include="Leclair.Stardew.ModManifestBuilder" Version="2.4.1" />
   </ItemGroup>
 
   <ItemGroup>
