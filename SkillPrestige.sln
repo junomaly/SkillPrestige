@@ -12,11 +12,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{97A03B7C-6
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkillPrestige", "SkillPrestige\SkillPrestige.csproj", "{51F035C9-0E81-4F27-9B5D-1A4C61FAEB88}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkillPrestige.LuckSkill", "SkillPrestige.LuckSkill\SkillPrestige.LuckSkill.csproj", "{666F2E76-D376-4DEB-9656-BD847B23E91E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkillPrestige.LuckSkill", "SkillPrestigeAdapter\SkillPrestige.LuckSkill\SkillPrestige.LuckSkill.csproj", "{666F2E76-D376-4DEB-9656-BD847B23E91E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{A8401C62-2051-4C3C-B97B-5281EBB04753}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkillPrestige.Yacs", "SkillPrestige.Yacs\SkillPrestige.Yacs.csproj", "{7915B95A-604B-408E-8A37-218267739375}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkillPrestige.Yacs", "SkillPrestigeAdapter\SkillPrestige.Yacs\SkillPrestige.Yacs.csproj", "{7915B95A-604B-408E-8A37-218267739375}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
