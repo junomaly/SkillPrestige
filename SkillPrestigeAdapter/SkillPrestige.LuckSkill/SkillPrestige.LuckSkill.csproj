@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SkillPrestige\SkillPrestige.csproj" />
+    <ProjectReference Include="..\..\SkillPrestige\SkillPrestige.csproj" />
   </ItemGroup>
 
   <ItemGroup>
