@@ -2,9 +2,9 @@
   /*
    | This file is automatically updated by ModManifestBuilder
    | when the project is compiled.
-   | 
+   |
    | Changes made to this file may be overwritten.
-   | 
+   |
    */
   "$schema": "https://smapi.io/schemas/manifest.json",
   "UniqueID": "CinderGarde.YetAnotherCookingSkillPrestigeAdapter",
@@ -12,12 +12,12 @@
   "Author": "CinderGarde",
   "Version": "1.0.0-Debug",
   "Description": "Extends Skill Prestige to support the Yet Another Cooking Skill mod.",
-  "MinimumApiVersion": "4.4.0",
+  "MinimumApiVersion": "4.0.0",
   "EntryDll": "SkillPrestige.Yacs.dll",
   "Dependencies": [
     {
       "UniqueID": "alphablackwolf.skillPrestige",
-      "MinimumVersion": "1.2.5"
+      "MinimumVersion": "1.4.3"
     },
     {
       "UniqueID": "moonslime.CookingSkill"

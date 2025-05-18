@@ -10,7 +10,7 @@
   "UniqueID": "alphablackwolf.skillPrestige",
   "Name": "SkillPrestige",
   "Author": "CinderGarde",
-  "Version": "1.2.5-Debug",
+  "Version": "1.4.4-Debug",
   "Description": "Lets you earn permanent profession perks beyond that which can normally be obtained in Vanilla play by spending Prestige Points, earned by resetting a skill from 10 to 0.",
   "MinimumApiVersion": "4.0.0",
   "EntryDll": "SkillPrestige.dll",

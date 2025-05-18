@@ -2,9 +2,9 @@
   /*
    | This file is automatically updated by ModManifestBuilder
    | when the project is compiled.
-   | 
+   |
    | Changes made to this file may be overwritten.
-   | 
+   |
    */
   "$schema": "https://smapi.io/schemas/manifest.json",
   "UniqueID": "Milli2306.SnSPrestigeAdapterPaladin",
@@ -17,7 +17,7 @@
   "Dependencies": [
     {
       "UniqueID": "alphablackwolf.skillPrestige",
-      "MinimumVersion": "1.4.4"
+      "MinimumVersion": "1.4.3"
     },
     {
       "UniqueID": "KCC.SnS"

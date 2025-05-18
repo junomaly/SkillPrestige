@@ -31,6 +31,6 @@
       <_ContentPatcherFiles Include="$(ProjectDir)ContentPatcher/**/*" />
     </ItemGroup>
 
-    <Copy SourceFiles="@(_ContentPatcherFiles)" DestinationFiles="@(_ContentPatcherFiles->'$(GameModsPath)/$(AssemblyName) [CP]/%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Copy SourceFiles="@(_ContentPatcherFiles)" DestinationFiles="@(_ContentPatcherFiles->'$(GameModsPath)/[CP] $(AssemblyName)/%(RecursiveDir)%(Filename)%(Extension)')" />
   </Target>
 </Project>
