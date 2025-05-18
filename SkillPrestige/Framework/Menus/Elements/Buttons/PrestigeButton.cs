@@ -58,7 +58,8 @@ namespace SkillPrestige.Framework.Menus.Elements.Buttons
 
             var bounds = new Rectangle(screenXCenter - dialogXCenter, screenYCenter - dialogYCenter, dialogWidth + IClickableMenu.borderWidth * 2, dialogHeight + IClickableMenu.borderWidth * 2);
             Logger.LogVerbose($"{this.Skill.Type.Name} skill prestige attempted.");
-            string message = $"Are you sure you wish to prestige your {this.Skill.Type.Name} skill? This cannot be undone and will revert you back to level 0 {this.Skill.Type.Name}. All associated benefits {(PerSaveOptions.Instance.ResetRecipesOnPrestige ? "and" : "except for")} crafting/cooking recipes will be lost.";
+            // string message = $"Are you sure you wish to prestige your {this.Skill.Type.Name} skill? This cannot be undone and will revert you back to level 0 {this.Skill.Type.Name}. All associated benefits {(PerSaveOptions.Instance.ResetRecipesOnPrestige ? "and" : "except for")} crafting/cooking recipes will be lost.";
+            string message = $"Are you sure you wish to prestige your {this.Skill.Type.Name} skill? This cannot be undone and will revert you back to level 0 {this.Skill.Type.Name}. All associated benefits except for crafting/cooking recipes will be lost.";
             Game1.nextClickableMenu = Game1.nextClickableMenu.Prepend(Game1.activeClickableMenu).ToList();
             Game1.activeClickableMenu = new WarningDialog(bounds, message, () => { Prestige.PrestigeSkill(this.Skill); }, () => { });
         }

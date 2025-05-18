@@ -24,8 +24,8 @@ namespace SkillPrestige.Framework
             }
         }
 
-        /// <summary>Whether to reset the recipes of a skill on load.</summary>
-        public bool ResetRecipesOnPrestige { get; set; }
+        // /// <summary>Whether to reset the recipes of a skill on load.</summary>
+        // public bool ResetRecipesOnPrestige { get; set; }
 
         public bool UseExperienceMultiplier { get; set; }
 
@@ -112,7 +112,7 @@ namespace SkillPrestige.Framework
             Logger.LogInformation("Creating new options file...");
             try
             {
-                Instance.ResetRecipesOnPrestige = true;
+                // Instance.ResetRecipesOnPrestige = true;
                 Instance.UseExperienceMultiplier = true;
                 Instance.ExperienceMultiplier = 0.1m;
                 Instance.CostOfTierOnePrestige = 1;

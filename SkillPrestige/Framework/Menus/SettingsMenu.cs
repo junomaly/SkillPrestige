@@ -17,7 +17,7 @@ namespace SkillPrestige.Framework.Menus
         private int DebounceTimer = 10;
         private bool InputInitiated;
 
-        private Checkbox ResetRecipesCheckbox;
+        // private Checkbox ResetRecipesCheckbox;
         private Checkbox UseExperienceMultiplierCheckbox;
         private Checkbox PainlessPrestigeModeCheckbox;
         private IntegerEditor TierOneCostEditor;
@@ -38,7 +38,7 @@ namespace SkillPrestige.Framework.Menus
             if (this.DebounceTimer > 0)
                 return;
 
-            this.ResetRecipesCheckbox.OnCursorMoved(e);
+            // this.ResetRecipesCheckbox.OnCursorMoved(e);
             this.UseExperienceMultiplierCheckbox.OnCursorMoved(e);
             this.PainlessPrestigeModeCheckbox.OnCursorMoved(e);
 
@@ -56,7 +56,7 @@ namespace SkillPrestige.Framework.Menus
             if (this.DebounceTimer > 0)
                 return;
 
-            this.ResetRecipesCheckbox.OnButtonPressed(e, isClick);
+            // this.ResetRecipesCheckbox.OnButtonPressed(e, isClick);
             this.UseExperienceMultiplierCheckbox.OnButtonPressed(e, isClick);
             this.PainlessPrestigeModeCheckbox.OnButtonPressed(e, isClick);
 
@@ -75,7 +75,7 @@ namespace SkillPrestige.Framework.Menus
             this.upperRightCloseButton?.draw(spriteBatch);
             this.DrawHeader(spriteBatch);
             if (!this.InputInitiated) this.InitiateInput();
-            this.ResetRecipesCheckbox.Draw(spriteBatch);
+            // this.ResetRecipesCheckbox.Draw(spriteBatch);
             this.UseExperienceMultiplierCheckbox.Draw(spriteBatch);
             this.TierOneCostEditor.Draw(spriteBatch);
             this.TierTwoCostEditor.Draw(spriteBatch);
@@ -91,12 +91,13 @@ namespace SkillPrestige.Framework.Menus
                 return;
             this.InputInitiated = true;
             Logger.LogVerbose("Settings menu - initiating input.");
-            var resetRecipeCheckboxBounds = new Rectangle(this.xPositionOnScreen + spaceToClearSideBorder * 3, this.yPositionOnScreen + (Game1.tileSize * 3.5).Floor(), 9 * Game1.pixelZoom, 9 * Game1.pixelZoom);
-            this.ResetRecipesCheckbox = new Checkbox(PerSaveOptions.Instance.ResetRecipesOnPrestige, "Reset Recipes upon prestige.", resetRecipeCheckboxBounds, ChangeRecipeReset);
+            // var resetRecipeCheckboxBounds = new Rectangle(this.xPositionOnScreen + spaceToClearSideBorder * 3, this.yPositionOnScreen + (Game1.tileSize * 3.5).Floor(), 9 * Game1.pixelZoom, 9 * Game1.pixelZoom);
+            // this.ResetRecipesCheckbox = new Checkbox(PerSaveOptions.Instance.ResetRecipesOnPrestige, "Reset Recipes upon prestige.", resetRecipeCheckboxBounds, ChangeRecipeReset);
 
+            var useExperienceMultiplierCheckboxBounds = new Rectangle(this.xPositionOnScreen + spaceToClearSideBorder * 3, this.yPositionOnScreen + (Game1.tileSize * 3.5).Floor(), 9 * Game1.pixelZoom, 9 * Game1.pixelZoom);
             const int padding = 4 * Game1.pixelZoom;
-            var useExperienceMultiplierCheckboxBounds = resetRecipeCheckboxBounds;
-            useExperienceMultiplierCheckboxBounds.Y += resetRecipeCheckboxBounds.Height + padding;
+            // var useExperienceMultiplierCheckboxBounds = resetRecipeCheckboxBounds;
+            // useExperienceMultiplierCheckboxBounds.Y += resetRecipeCheckboxBounds.Height + padding;
             this.UseExperienceMultiplierCheckbox = new Checkbox(PerSaveOptions.Instance.UseExperienceMultiplier, "Use prestige points experience multiplier.", useExperienceMultiplierCheckboxBounds, ChangeUseExperienceMultiplier);
 
             var tierOneEditorLocation = new Vector2(useExperienceMultiplierCheckboxBounds.X, useExperienceMultiplierCheckboxBounds.Y + useExperienceMultiplierCheckboxBounds.Height + padding);
@@ -126,25 +127,27 @@ namespace SkillPrestige.Framework.Menus
         private void SetClickableTextureIds()
         {
             // main ids, just did sequential numbers
-            this.ResetRecipesCheckbox.ClickableTextureComponent.myID = 1;
-            this.UseExperienceMultiplierCheckbox.ClickableTextureComponent.myID = 2;
-            this.TierOneCostEditor.MinusButton.ClickableTextureComponent.myID = 3;
-            this.TierOneCostEditor.PlusButton.ClickableTextureComponent.myID = 4;
-            this.TierTwoCostEditor.MinusButton.ClickableTextureComponent.myID = 5;
-            this.TierTwoCostEditor.PlusButton.ClickableTextureComponent.myID = 6;
-            this.PointsPerPrestigeEditor.MinusButton.ClickableTextureComponent.myID = 7;
-            this.PointsPerPrestigeEditor.PlusButton.ClickableTextureComponent.myID = 8;
-            this.PainlessPrestigeModeCheckbox.ClickableTextureComponent.myID = 9;
-            this.ExperiencePerPainlessPrestigeEditor.MinusButton.ClickableTextureComponent.myID = 10;
-            this.ExperiencePerPainlessPrestigeEditor.PlusButton.ClickableTextureComponent.myID = 11;
+            // this.ResetRecipesCheckbox.ClickableTextureComponent.myID = 1;
+            this.UseExperienceMultiplierCheckbox.ClickableTextureComponent.myID = 1;
+            this.TierOneCostEditor.MinusButton.ClickableTextureComponent.myID = 2;
+            this.TierOneCostEditor.PlusButton.ClickableTextureComponent.myID = 3;
+            this.TierTwoCostEditor.MinusButton.ClickableTextureComponent.myID = 4;
+            this.TierTwoCostEditor.PlusButton.ClickableTextureComponent.myID = 5;
+            this.PointsPerPrestigeEditor.MinusButton.ClickableTextureComponent.myID = 6;
+            this.PointsPerPrestigeEditor.PlusButton.ClickableTextureComponent.myID = 7;
+            this.PainlessPrestigeModeCheckbox.ClickableTextureComponent.myID = 8;
+            this.ExperiencePerPainlessPrestigeEditor.MinusButton.ClickableTextureComponent.myID = 9;
+            this.ExperiencePerPainlessPrestigeEditor.PlusButton.ClickableTextureComponent.myID = 10;
 
             //neighbor ids
-            this.upperRightCloseButton.downNeighborID = this.ResetRecipesCheckbox.ClickableTextureComponent.myID;
 
-            this.ResetRecipesCheckbox.ClickableTextureComponent.upNeighborID = this.upperRightCloseButton.myID;
-            this.ResetRecipesCheckbox.ClickableTextureComponent.downNeighborID = this.UseExperienceMultiplierCheckbox.ClickableTextureComponent.myID;
+            // this.upperRightCloseButton.downNeighborID = this.ResetRecipesCheckbox.ClickableTextureComponent.myID;
+            //
+            // this.ResetRecipesCheckbox.ClickableTextureComponent.upNeighborID = this.upperRightCloseButton.myID;
+            // this.ResetRecipesCheckbox.ClickableTextureComponent.downNeighborID = this.UseExperienceMultiplierCheckbox.ClickableTextureComponent.myID;
+            //
+            // this.UseExperienceMultiplierCheckbox.ClickableTextureComponent.upNeighborID = this.ResetRecipesCheckbox.ClickableTextureComponent.myID;
 
-            this.UseExperienceMultiplierCheckbox.ClickableTextureComponent.upNeighborID = this.ResetRecipesCheckbox.ClickableTextureComponent.myID;
             this.UseExperienceMultiplierCheckbox.ClickableTextureComponent.downNeighborID = this.TierOneCostEditor.MinusButton.ClickableTextureComponent.myID;
 
             this.TierOneCostEditor.MinusButton.ClickableTextureComponent.upNeighborID = this.UseExperienceMultiplierCheckbox.ClickableTextureComponent.myID;
@@ -190,7 +193,7 @@ namespace SkillPrestige.Framework.Menus
             return new List<ClickableComponent>
             {
                 this.upperRightCloseButton,
-                this.ResetRecipesCheckbox.ClickableTextureComponent,
+                // this.ResetRecipesCheckbox.ClickableTextureComponent,
                 this.UseExperienceMultiplierCheckbox.ClickableTextureComponent,
                 this.TierOneCostEditor.MinusButton.ClickableTextureComponent,
                 this.TierOneCostEditor.PlusButton.ClickableTextureComponent,
@@ -206,7 +209,7 @@ namespace SkillPrestige.Framework.Menus
 
         private static void ChangeRecipeReset(bool resetRecipes)
         {
-            PerSaveOptions.Instance.ResetRecipesOnPrestige = resetRecipes;
+            // PerSaveOptions.Instance.ResetRecipesOnPrestige = resetRecipes;
             PerSaveOptions.Save();
         }
 

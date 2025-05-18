@@ -83,16 +83,16 @@ namespace SkillPrestige
                     skill.SetSkillExperience(0);
                     skill.SetSkillLevel(0);
                     Logger.LogInformation($"Skill {skill.Type.Name} experience and level reset.");
-                    if (PerSaveOptions.Instance.ResetRecipesOnPrestige)
-                    {
-                        var currentPrestige = PrestigeSet.Instance.Prestiges.Single(x => x.SkillType == skill.Type);
-                        currentPrestige.CraftingRecipeAmountsToSave = RemovePlayerCraftingRecipesForSkill(skill.Type);
-                        currentPrestige.CookingRecipeAmountsToSave = RemovePlayerCookingRecipesForSkill(skill.Type);
-                        Logger.LogVerbose($"stored crafting recipe counts upon prestige of skill {currentPrestige.SkillType.Name}, count: {currentPrestige.CraftingRecipeAmountsToSave.Count}");
-                        Logger.LogVerbose($"stored cooking recipe counts upon prestige of skill {currentPrestige.SkillType.Name}, count: {currentPrestige.CookingRecipeAmountsToSave.Count}");
-                        RecipeHandler.ResetRecipes();
-                        RecipeHandler.LoadRecipes();
-                    }
+                    // if (PerSaveOptions.Instance.ResetRecipesOnPrestige)
+                    // {
+                    //     var currentPrestige = PrestigeSet.Instance.Prestiges.Single(x => x.SkillType == skill.Type);
+                    //     currentPrestige.CraftingRecipeAmountsToSave = RemovePlayerCraftingRecipesForSkill(skill.Type);
+                    //     currentPrestige.CookingRecipeAmountsToSave = RemovePlayerCookingRecipesForSkill(skill.Type);
+                    //     Logger.LogVerbose($"stored crafting recipe counts upon prestige of skill {currentPrestige.SkillType.Name}, count: {currentPrestige.CraftingRecipeAmountsToSave.Count}");
+                    //     Logger.LogVerbose($"stored cooking recipe counts upon prestige of skill {currentPrestige.SkillType.Name}, count: {currentPrestige.CookingRecipeAmountsToSave.Count}");
+                    //     RecipeHandler.ResetRecipes();
+                    //     RecipeHandler.LoadRecipes();
+                    // }
                     Profession.RemoveProfessions(skill);
                     PlayerManager.CorrectStats(skill);
                     Profession.AddMissingProfessions();
