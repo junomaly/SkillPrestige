@@ -8,6 +8,11 @@
     </PropertyGroup>
 
     <PropertyGroup>
+        <!--<Dependencies_VersionBehaviour>Warning</Dependencies_VersionBehaviour>-->
+        <References_VersionBehavior>Warning</References_VersionBehavior>
+    </PropertyGroup>
+
+    <PropertyGroup>
         <ModZipPath>$(SolutionDir)\_release</ModZipPath>
         <EnableModZip Condition="$(Configuration) != 'Release'">False</EnableModZip>
     </PropertyGroup>
