@@ -303,7 +303,7 @@ namespace SkillPrestige
         private void LoadSprites()
         {
             Logger.LogInformation("Loading sprites...");
-            Button.DefaultButtonTexture = Game1.content.Load<Texture2D>(@"LooseSprites\DialogBoxGreen");
+            Button.DefaultButtonTexture = this.Helper.ModContent.Load<Texture2D>("assets/DialogBoxGreen");
             MinimalistProfessionButton.ProfessionButtonTexture = Game1.content.Load<Texture2D>(@"LooseSprites\boardGameBorder");
 
             string checkmarkFilePath = Path.Combine(ModPath, "assets", "checkmark.png");
