@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Version>1.0.0</Version>
+		<RootNamespace>SkillPrestige.Socializing</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
+	</ItemGroup>
+
+	<PropertyGroup>
+		<Name>SkillPrestige.Socializing</Name>
+		<Author>Milli2306</Author>
+		<Description>Extends Skill Prestige to support the Socializing Skill</Description>
+		<UniqueId>Milli2306.SocializingPrestigeAdapter</UniqueId>
+
+		<UpdateKeys></UpdateKeys>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<ProjectReference Include="..\SkillPrestige\SkillPrestige.csproj" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<Reference Include="SpaceCore">
+			<HintPath>$(GameModsPath)\SpaceCore\SpaceCore.dll</HintPath>
+		</Reference>
+		<Reference Include="SpaceCore.Content.Engine">
+			<HintPath>$(GameModsPath)\SpaceCore\SpaceCore.Content.Engine.dll</HintPath>
+		</Reference>
+		<Reference Include="SpaceCore.Content.Parser">
+			<HintPath>$(GameModsPath)\SpaceCore\SpaceCore.Content.Parser.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+
+</Project>

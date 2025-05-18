@@ -1,0 +1,31 @@
+{
+  /*
+   | This file is automatically updated by ModManifestBuilder
+   | when the project is compiled.
+   | 
+   | Changes made to this file may be overwritten.
+   | 
+   */
+  "$schema": "https://smapi.io/schemas/manifest.json",
+  "UniqueID": "Milli2306.SnSPrestigeAdapterDruid",
+  "Name": "Skill Prestige for the Druid Skill from SnS",
+  "Author": "Milli2306",
+  "Version": "1.0.0-Debug",
+  "Description": "Extends Skill Prestige to support the Druid Skill from SnS.",
+  "MinimumApiVersion": "4.0.0",
+  "EntryDll": "SkillPrestige.SnSDruid.dll",
+  "Dependencies": [
+    {
+      "UniqueID": "alphablackwolf.skillPrestige",
+      "MinimumVersion": "1.4.4"
+    },
+    {
+      "UniqueID": "KCC.SnS"
+    },
+    {
+      "UniqueID": "spacechase0.SpaceCore",
+      "MinimumVersion": "1.27.0"
+    }
+  ],
+  "UpdateKeys": []
+}

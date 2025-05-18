@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Version>1.0.0</Version>
+		<RootNamespace>SkillPrestige.SnSRogue</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
+	</ItemGroup>
+	
+	<PropertyGroup>
+		<Name>SkillPrestige.SnSPaladin</Name>
+		<Author>Milli2306</Author>
+		<Description>Extends Skill Prestige to support the Paladin Skill from SnS</Description>
+		<UniqueId>Milli2306.SnSPrestigeAdapterPaladin</UniqueId>
+
+		<UpdateKeys></UpdateKeys>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<ProjectReference Include="..\SkillPrestige\SkillPrestige.csproj" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<Reference Include="SpaceCore">
+			<HintPath>$(GameModsPath)\SpaceCore\SpaceCore.dll</HintPath>
+		</Reference>
+		<Reference Include="SpaceCore.Content.Engine">
+			<HintPath>$(GameModsPath)\SpaceCore\SpaceCore.Content.Engine.dll</HintPath>
+		</Reference>
+		<Reference Include="SpaceCore.Content.Parser">
+			<HintPath>$(GameModsPath)\SpaceCore\SpaceCore.Content.Parser.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+</Project>
